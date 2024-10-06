@@ -53,6 +53,10 @@ const Login = () => {
         }
     };
 
+    const clearOnClick = () => {
+        setFormData({ realName: '', login: '', password: '' });
+    }
+
     return (
         <div className="login-page">
             <header>
@@ -88,7 +92,7 @@ const Login = () => {
                         </form>
                         <div className="new-user">
                             <label>{isRegistering ? "Already have an account? " : "New user? "}</label>
-                            <a className="register-click" onClick={toggleForm} href="#!">{isRegistering ? "Login" : "Sign up"}</a>
+                            <a className="register-click" onClick={() => {toggleForm(); clearOnClick();}} href="#!">{isRegistering ? "Login" : "Sign up"}</a>
                         </div>
                     </div>
                 </div>
