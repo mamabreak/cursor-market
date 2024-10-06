@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import Styles from './header.module.css'
 
 import darkModeSwitcher from '../../icons/dark-mode-switcher.svg';
 import userIcon from '../../icons/user-icon.svg';
@@ -17,18 +18,20 @@ const Header = () => {
     }, [isDarkMode]);
 
     return(
-        <header>
-                <div className="half-black-header">
-                    <h1 className="brend-name-first-label">Cursor</h1>
+        <>
+        <main>
+                <div className={Styles.half_black_header}>
+                    <h1 className={Styles.brend_name_first_label}>Cursor</h1>
                 </div>
-                <div className="brend-tools-container">
-                    <h1 className="brend-name-second-label">Market</h1>
-                    <div className="user-tools-bar">
-                        <img src={darkModeSwitcher} alt="Dark mode switcher" className="dark-mode-switcher" onClick={toggleDarkMode} />
-                        <img src={userIcon} alt="User Icon" className="user-icon" />
+                <div className={Styles.brend_tools_container}>
+                    <h1 className={Styles.brend_name_second_label}>Market</h1>
+                    <div className={Styles.user_tools_bar}>
+                        <img src={darkModeSwitcher} alt="Dark mode switcher" onClick={toggleDarkMode} />
+                        <img src={userIcon} alt="User Icon" />
                     </div>
                 </div>
-            </header>
+            </main>
+        </>
     )
 }
 

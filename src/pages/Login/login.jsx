@@ -74,7 +74,7 @@ const Login = () => {
                                 )}
                                 <button type="submit" className="login_button">{isRegistering ? "Sign up" : "Log in"}</button>
                             </form>
-                            <div className="new-user">
+                            <div>
                                 <label>{isRegistering ? "Already have an account? " : "New user? "}</label>
                                 <a onClick={toggleForm} href="#!">{isRegistering ? "Log in" : "Sign up"}</a>
                             </div>

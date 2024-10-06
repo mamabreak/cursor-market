@@ -47,10 +47,6 @@
     color: black; /* Use darker color for readability */
 }
 
-.light-mode .brend-name-first-label {
-    color: white;
-}
-
 .dark-mode input {
     background-color: #181A1B;
 }
@@ -79,4 +75,8 @@
 .light-mode button {
     color: white;
     background-color: rgb(47, 110, 206);
+}
+
+.light-mode .brend-name-first-label {
+    color: white;
 }

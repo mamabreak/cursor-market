@@ -1,0 +1,52 @@
+main {
+    padding: 0;
+    margin: 0;
+    width: 99vw;
+    height: 50px;
+    user-select: text;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 1000;
+    color: black;
+}
+
+.brend_name_first_label {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 50px;
+}
+
+.brend_name_second_label {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.half_black_header {
+    background-color: black;
+    width: 50vw;
+    height: 50px;
+    display: block;
+}
+
+.brend_tools_container {
+    max-width: 50vw;
+    width: 50vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_tools_bar {
+    width: 67px;
+    height: 50px;
+    justify-content: space-between; /* This works for items inside the user-tools-bar */
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+}

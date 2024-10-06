@@ -1,5 +1,6 @@
 root {
     background-color: white;
+    height: 100%; /* Ensure the root div takes full height */
 }
 
 html, body {
@@ -8,6 +9,7 @@ html, body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
+    transition: background-color 0.5s ease, color 0.2s ease;
   }
 
 * {
@@ -16,23 +18,13 @@ html, body {
     /* box-sizing: border-box; */
   }
 
-#root {
-    height: 100%; /* Ensure the root div takes full height */
-  }
-
-header {
-    width: 99vw;
-    height: 50px;
-    background-color: white;
-    position: relative;
-    display: flex;
-}
-
 a {
     color: black;
     text-decoration: none;
     font-weight: 500;
 }
+
+img {cursor: pointer} 
 
 input {
     height: 15px;
@@ -67,68 +59,6 @@ form {
     width: 100%; /* Ensure it takes full width */
 }
 
-.login_page {
-    user-select: none; /* For most modern browsers */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For Internet Explorer/Edge */
-}
-
-.half-black-header {
-    background-color: black;
-    width: 50vw;
-    height: 50px;
-    display: block;
-}
-
-h1 {
-    font-family: 'Inter';
-    font-style: bold;
-    font-weight: 900;
-    padding: 0;
-    margin: 0;
-}
-
-.dark-mode-switcher {
-    width: 30px;
-    height: 30px;
-}
-
-.user-icon {
-    width: 30px;
-    height: 30px;
-}
-
-.user-tools-bar {
-    width: 67px;
-    height: 50px;
-    justify-content: space-between; /* This works for items inside the user-tools-bar */
-    align-items: center;
-    display: flex;
-    margin-right: 10px;
-}
-
-.brend-name-first-label {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    height: 50px;
-}
-
-.brend_name_second_label {
-    color: black;
-    display: flex;
-    align-items: center;
-}
-
-.brend_tools_container {
-    max-width: 50vw;
-    width: 50vw;
-    display: flex;
-    justify-content: space-between;
-}
-
 .user_zone {
     display: flex; /* Makes it a flex container */
     justify-content: center; /* Centers the content horizontally */
@@ -151,39 +81,14 @@ h1 {
     text-align: center;
 }
 
-.new_user_container {
-    display: flex;
-}
-
-
-.login_action {
+.login_action, .register_action {
     width: 200px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.register_action {
-    width: 200px;
+    transition: height 0.2s ease;
+} .register_action {
     height: 125px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
-
-.login_action {
-    transition: height 0.2s ease;
-}
-
-.register_action {
-    transition: height 0.2s ease;
-}
-
-body {
-    transition: background-color 0.5s ease, color 0.2s ease;
-}
-
-img {cursor: pointer} 
