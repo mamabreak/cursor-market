@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './login.css';
 import '../App.css';
 import darkModeSwitcher from '../icons/dark-mode-switcher.png';
@@ -57,6 +57,16 @@ const Login = () => {
         setFormData({ realName: '', login: '', password: '' });
     }
 
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode((prevMode) => !prevMode);
+    };
+
+    useEffect(() => {
+        document.body.className = isDarkMode ? 'dark-mode' : 'light-mode';
+    }, [isDarkMode]);
+
     return (
         <div className="login-page">
             <header>
@@ -66,7 +76,9 @@ const Login = () => {
                 <div className="brend-tools-container">
                     <h1 className="brend-name-second-label">Market</h1>
                     <div className="user-tools-bar">
-                        <img src={darkModeSwitcher} alt="Dark mode switcher" className="dark-mode-switcher" />
+                        <div className="{isDarkMode ? 'dark-mode : light-mode">
+                            <img src={darkModeSwitcher} alt="Dark mode switcher" className="dark-mode-switcher" onClick={toggleDarkMode} />
+                        </div>
                         <img src={userIcon} alt="User Icon" className="user-icon" />
                     </div>
                 </div>
@@ -102,4 +114,3 @@ const Login = () => {
 };
 
 export default Login;
-

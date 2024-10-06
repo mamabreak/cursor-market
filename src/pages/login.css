@@ -2,6 +2,10 @@ root {
     background-color: white;
 }
 
+body {
+    background-color: white;
+}
+
 header {
     width: 99vw;
     height: 50px;
@@ -177,4 +181,69 @@ h1 {
 
 .register-action {
     transition: height 0.2s ease;
+}
+
+body {
+    transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+.light-mode {
+    background-color: white;
+    color: #333; /* Darker gray for better readability */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dark-mode {
+    background-color: #181A1B;
+    color: white;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.light-mode h1,
+.dark-mode h1,
+.light-mode p,
+.dark-mode p,
+.light-mode a,
+.dark-mode a,
+.light-mode label,
+.dark-mode label,
+.light-mode .brend-name-second-label,
+.dark-mode .brend-name-second-label {
+    transition: color 0.1s ease-in-out;
+}
+
+.light-mode p, 
+.light-mode h1, 
+.light-mode a, 
+.light-mode label, 
+.light-mode {
+    color: black; /* Use darker color for readability */
+}
+
+.light-mode .brend-name-first-label {
+    color: white;
+}
+
+.dark-mode input {
+    background-color: #181A1B;
+}
+
+.dark-mode p, 
+.dark-mode h1, 
+.dark-mode a, 
+.dark-mode label {
+    color: white; /* Text color in dark mode */
+}
+
+.dark-mode .brend-name-second-label {
+    color: black;
+}
+
+.dark-mode .login-container {
+    background-color: #1e2122;
+}
+
+.dark-mode .half-black-header {
+    color: white;
+    background-color: #181A1B;
 }
