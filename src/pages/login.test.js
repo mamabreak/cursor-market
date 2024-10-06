@@ -16,10 +16,11 @@ describe('Login Component', () => {
                 fireEvent.change(utils.getByPlaceholderText(placeholder), { target: { value } });
             },
             clickButton: (name) => fireEvent.click(utils.getByRole('button', { name: new RegExp(name, 'i') })),
+            toggleDarkMode: () => fireEvent.click(utils.getByAltText('Dark mode switcher')), // Use the alt text of the image
         };
     };
 
-    it('should register a new user', () => {
+    test('should register a new user', () => {
         const { switchToSignUp, fillInput, clickButton } = setup();
 
         switchToSignUp();
@@ -27,7 +28,7 @@ describe('Login Component', () => {
         fillInput('Email', 'test@example.com');
         fillInput('Password', 'password');
         
-        clickButton('register');
+        clickButton('Sign up');
         
         expect(console.log).toHaveBeenCalledWith(
           expect.stringContaining('We have a new user now:'),
@@ -35,7 +36,7 @@ describe('Login Component', () => {
         );
     });
 
-    it('should log in an existing user', () => {
+    test('should log in an existing user', () => {
         const { getByText, fillInput, clickButton } = setup();
 
         // Switch to registration form
@@ -43,32 +44,48 @@ describe('Login Component', () => {
         fillInput('Real Name', 'Test User');
         fillInput('Email', 'test@example.com');
         fillInput('Password', 'password');
-        clickButton('register');
+        clickButton('Sign up');
 
         // Switch back to login form
-        fireEvent.click(getByText('Login'));
+        fireEvent.click(getByText('Log in'));
         fillInput('Email', 'test@example.com');
         fillInput('Password', 'password');
-        clickButton('login');
+        clickButton('Log in');
 
         // Add your assertions here (e.g., checking if logged in successfully)
+        // Example assertion could be checking for a success message or user being redirected
     });
 
-    it('should notify if user already exists', () => {
+    test('should notify if user already exists', () => {
         const { switchToSignUp, fillInput, clickButton } = setup();
 
         switchToSignUp();
         fillInput('Real Name', 'Test User');
         fillInput('Email', 'test@example.com');
         fillInput('Password', 'password');
-        clickButton('register');
+        clickButton('Sign up');
 
         // Attempt to register the same user again
         fillInput('Real Name', 'Test User');
         fillInput('Email', 'test@example.com');
         fillInput('Password', 'password');
-        clickButton('register');
+        clickButton('Sign up');
 
         expect(console.log).toHaveBeenCalledWith("User already exists");
+    });
+
+    test('should change theme to dark and back', () => {
+        const { toggleDarkMode } = setup();
+
+        // Initial state check (assuming there's a way to check the current theme)
+        expect(document.body.className).toBe('light-mode');
+
+        // Change to dark mode
+        toggleDarkMode();
+        expect(document.body.className).toBe('dark-mode'); // Adjust according to your implementation
+
+        // Change back to light mode
+        toggleDarkMode();
+        expect(document.body.className).toBe('light-mode'); // Adjust according to your implementation
     });
 });

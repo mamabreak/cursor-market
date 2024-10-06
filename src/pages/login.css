@@ -40,13 +40,14 @@ input:focus {
 button {
     text-decoration: none;
     border: none;
-    background-color: white;
+    background-color: rgb(44, 122, 240);
     border-radius: 4px;
     width: 75px;
     padding: 5px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
+    color: black;
 }
 
 form {
@@ -184,19 +185,19 @@ h1 {
 }
 
 body {
-    transition: background-color 0.25s ease, color 0.2s ease;
+    transition: background-color 0.5s ease, color 0.2s ease;
 }
 
 .light-mode {
     background-color: white;
     color: #333; /* Darker gray for better readability */
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 }
 
 .dark-mode {
     background-color: #181A1B;
     color: white;
-    transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 }
 
 .light-mode h1,
@@ -208,14 +209,17 @@ body {
 .light-mode label,
 .dark-mode label,
 .light-mode .brend-name-second-label,
-.dark-mode .brend-name-second-label {
-    transition: color 0.1s ease-in-out;
+.dark-mode .brend-name-second-label,
+.light-mode .login-container,
+.dark-mode .login-container {
+    transition: color 0.25s ease-in-out;
 }
 
 .light-mode p, 
 .light-mode h1, 
 .light-mode a, 
 .light-mode label, 
+.light-mode button,
 .light-mode {
     color: black; /* Use darker color for readability */
 }
@@ -243,7 +247,12 @@ body {
     background-color: #1e2122;
 }
 
-.dark-mode .half-black-header {
+.dark-mode .half-black-header, button {
     color: white;
     background-color: #181A1B;
+}
+
+.light-mode button {
+    color: white;
+    background-color: rgb(47, 110, 206);
 }

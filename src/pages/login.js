@@ -86,7 +86,7 @@ const Login = () => {
             <div className="user-zone">
                 <div className="login-container">
                     <div className="login-indent">
-                        <h1 className="login-label">{isRegistering ? "Register" : "Login"}</h1>
+                        <h1 className="login-label">{isRegistering ? "Registration" : "Log in"}</h1>
                         <form className={isRegistering ? "register-action" : "login-action"} onSubmit={isRegistering ? handleRegister : handleLogin}>
                             {isRegistering ? (
                                 <>
@@ -100,11 +100,11 @@ const Login = () => {
                                     <input className="password-input" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
                                 </>
                             )}
-                            <button type="submit" className="login-button">{isRegistering ? "Register" : "Login"}</button>
+                            <button type="submit" className="login-button">{isRegistering ? "Sign up" : "Log in"}</button>
                         </form>
                         <div className="new-user">
                             <label>{isRegistering ? "Already have an account? " : "New user? "}</label>
-                            <a className="register-click" onClick={() => {toggleForm(); clearOnClick();}} href="#!">{isRegistering ? "Login" : "Sign up"}</a>
+                            <a className="register-click" onClick={() => {toggleForm(); clearOnClick();}} href="#!">{isRegistering ? "Log in" : "Sign up"}</a>
                         </div>
                     </div>
                 </div>
