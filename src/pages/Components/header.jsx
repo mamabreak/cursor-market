@@ -18,8 +18,7 @@ const Header = () => {
     }, [isDarkMode]);
 
     return(
-        <>
-        <main>
+        <header>
                 <div className={Styles.half_black_header}>
                     <h1 className={Styles.brend_name_first_label}>Cursor</h1>
                 </div>
@@ -30,8 +29,7 @@ const Header = () => {
                         <img src={userIcon} alt="User Icon" />
                     </div>
                 </div>
-            </main>
-        </>
+            </header>
     )
 }
 

@@ -56,7 +56,7 @@ const Login = () => {
             <Header />
             <main className={styles.login_page}>
                 <div className={styles.user_zone}>
-                    <div className="login_container">
+                    <div className={styles.login_container}>
                         <div className={styles.login_indent}>
                             <h1 className={styles.login_label}>{isRegistering ? "Registration" : "Log in"}</h1>
                             <form className={isRegistering ? styles.register_action : styles.login_action} onSubmit={isRegistering ? handleRegister : handleLogin}>
@@ -83,7 +83,6 @@ const Login = () => {
                 </div>
             </main>
         </>
-        
     );
 };
 
