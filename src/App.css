@@ -4,13 +4,3 @@
   font-weight: 400; /* Replace with desired weight, e.g., 400 for normal */
   font-style: normal; /* This can be changed if needed */
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Ensure the body takes up full height */
-}
-
-#root {
-  height: 100%; /* Ensure the root div takes full height */
-}

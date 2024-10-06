@@ -2,9 +2,23 @@ root {
     background-color: white;
 }
 
-body {
+html, body {
+    height: 100%; /* Ensure the body takes up full height */
     background-color: white;
-}
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+  }
+
+#root {
+    height: 100%; /* Ensure the root div takes full height */
+  }
 
 header {
     width: 99vw;
@@ -44,9 +58,6 @@ button {
     border-radius: 4px;
     width: 75px;
     padding: 5px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     color: black;
 }
 
@@ -56,7 +67,7 @@ form {
     width: 100%; /* Ensure it takes full width */
 }
 
-.login-page {
+.login_page {
     user-select: none; /* For most modern browsers */
     -webkit-user-select: none; /* For Safari */
     -moz-user-select: none; /* For Firefox */
@@ -105,45 +116,32 @@ h1 {
     height: 50px;
 }
 
-.brend-name-second-label {
+.brend_name_second_label {
     color: black;
     display: flex;
     align-items: center;
 }
 
-.brend-tools-container {
+.brend_tools_container {
     max-width: 50vw;
     width: 50vw;
     display: flex;
     justify-content: space-between;
 }
 
-.user-zone {
+.user_zone {
     display: flex; /* Makes it a flex container */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
     height: 100vh; /* Optional: full viewport height */
 }
 
-.login-container {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    background-color: #F0F0F0;
-    border-radius: 10px;
-    width: 450px;
-    height: 300px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.login-label {
+.login_label {
     font-style: normal;
     font-weight: 500;
 }
 
-.login-indent {
+.login_indent {
     width: 400px;
     height: 200px;
     justify-content: space-between;
@@ -153,12 +151,12 @@ h1 {
     text-align: center;
 }
 
-.new-user-container {
+.new_user_container {
     display: flex;
 }
 
 
-.login-action {
+.login_action {
     width: 200px;
     height: 100px;
     display: flex;
@@ -167,7 +165,7 @@ h1 {
     align-items: center;
 }
 
-.register-action {
+.register_action {
     width: 200px;
     height: 125px;
     display: flex;
@@ -176,11 +174,11 @@ h1 {
     align-items: center;
 }
 
-.login-action {
+.login_action {
     transition: height 0.2s ease;
 }
 
-.register-action {
+.register_action {
     transition: height 0.2s ease;
 }
 
@@ -188,71 +186,4 @@ body {
     transition: background-color 0.5s ease, color 0.2s ease;
 }
 
-.light-mode {
-    background-color: white;
-    color: #333; /* Darker gray for better readability */
-    transition: background-color 0.25s ease-in-out;
-}
-
-.dark-mode {
-    background-color: #181A1B;
-    color: white;
-    transition: background-color 0.25s ease-in-out;
-}
-
-.light-mode h1,
-.dark-mode h1,
-.light-mode p,
-.dark-mode p,
-.light-mode a,
-.dark-mode a,
-.light-mode label,
-.dark-mode label,
-.light-mode .brend-name-second-label,
-.dark-mode .brend-name-second-label,
-.light-mode .login-container,
-.dark-mode .login-container {
-    transition: color 0.25s ease-in-out;
-}
-
-.light-mode p, 
-.light-mode h1, 
-.light-mode a, 
-.light-mode label, 
-.light-mode button,
-.light-mode {
-    color: black; /* Use darker color for readability */
-}
-
-.light-mode .brend-name-first-label {
-    color: white;
-}
-
-.dark-mode input {
-    background-color: #181A1B;
-}
-
-.dark-mode p, 
-.dark-mode h1, 
-.dark-mode a, 
-.dark-mode label {
-    color: white; /* Text color in dark mode */
-}
-
-.dark-mode .brend-name-second-label {
-    color: black;
-}
-
-.dark-mode .login-container {
-    background-color: #1e2122;
-}
-
-.dark-mode .half-black-header, button {
-    color: white;
-    background-color: #181A1B;
-}
-
-.light-mode button {
-    color: white;
-    background-color: rgb(47, 110, 206);
-}
+img {cursor: pointer} 
