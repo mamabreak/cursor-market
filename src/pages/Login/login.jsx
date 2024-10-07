@@ -1,55 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from './login.module.css'
-import '../../App.css';
 import Header from '../Components/header'
+import Register from './register_form/register_form'
+import Login from './login_form/login_form'
 
-const Login = () => {
-    const [isRegistering, setIsRegistering] = useState(false);
-    const [users, setUsers] = useState([]);
+const LoginComponent = () => {
     const [formData, setFormData] = useState({ realName: '', login: '', password: '' });
+    const [isRegistering, setIsRegistering] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevData => ({ ...prevData, [name]: value }));
-    };
+    };    
 
     const toggleForm = () => {
         setIsRegistering(prev => !prev);
         setFormData({ realName: '', login: '', password: '' });
     }
-
-    const handleRegister = (e) => {
-        e.preventDefault();
-        if (users.some(u => u.login === formData.login)) {
-            console.log("User already exists");
-            return;
-        }
-        
-        const newUser = {
-            realName: formData.realName,
-            login: formData.login,
-            password: formData.password,
-            dateOfRegistration: new Date().toISOString(),
-            likedCursors: [],
-            uploads: 0,
-            hobby: "Horsing",
-        };
-
-        setUsers(prevUsers => [...prevUsers, newUser]);
-        console.log('We have a new user now:', newUser);
-        setFormData({ realName: '', login: '', password: '' });
-    };
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        const user = users.find(u => u.login === formData.login && u.password === formData.password);
-        if (user) {
-            console.log('Logged in:', user);
-            setFormData({ realName: '', login: '', password: '' });
-        } else {
-            console.log('Invalid login credentials');
-        }
-    };
 
     return (
         <>
@@ -58,26 +25,11 @@ const Login = () => {
                 <div className={styles.user_zone}>
                     <div className={styles.login_container}>
                         <div className={styles.login_indent}>
-                            <h1 className={styles.login_label}>{isRegistering ? "Registration" : "Log in"}</h1>
-                            <form className={isRegistering ? styles.register_action : styles.login_action} onSubmit={isRegistering ? handleRegister : handleLogin}>
-                                {isRegistering ? (
-                                    <>
-                                        <input className="name-input" placeholder="Real Name" type="text" name="realName" value={formData.realName} onChange={handleChange} required />
-                                        <input className="login-input" placeholder="Email" type="email" name="login" value={formData.login} onChange={handleChange} required />
-                                        <input className="password-input" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
-                                    </>
-                                ) : (
-                                    <>
-                                        <input className="login-input" placeholder="Email" type="email" name="login" value={formData.login} onChange={handleChange} required />
-                                        <input className="password-input" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
-                                    </>
-                                )}
-                                <button type="submit" className="login_button">{isRegistering ? "Sign up" : "Log in"}</button>
-                            </form>
+                            {isRegistering ? <Register handleChange={handleChange} /> : <Login />}
                             <div>
-                                <label>{isRegistering ? "Already have an account? " : "New user? "}</label>
-                                <a onClick={toggleForm} href="#!">{isRegistering ? "Log in" : "Sign up"}</a>
-                            </div>
+                    <label>New user? </label>
+                    <a onClick={toggleForm} href="#!">Sign up</a>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -86,4 +38,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginComponent;
