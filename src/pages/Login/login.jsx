@@ -18,9 +18,9 @@ const LoginComponent = () => {
         <>
             <Header />
             <main className={styles.login_page}>
-                <div className={styles.user_zone}>
-                    <div className={styles.login_container}>
-                        <div className={styles.login_indent}>
+                <div className={`${styles.user_zone} ${styles.display_flex} ${styles.center_common} ${styles.center_items}`}>
+                    <div className={`${styles.login_container} ${styles.center_common} ${styles.center_items}`}>
+                        <div className={`${styles.login_spacing} ${styles.center_common} ${styles.column_direction} ${styles.spacing_between}`}>
                             {isRegistering ? <Register users={users} setUsers={setUsers} formData={formData} setFormData={setFormData}/> : <Login users={users} />}
                         <div>
                             <label>{isRegistering ? "Already have an account? " : "New user? "}</label>

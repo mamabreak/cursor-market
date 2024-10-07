@@ -60,48 +60,48 @@ form {
 }
 
 .user_zone {
-    display: flex; /* Makes it a flex container */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    height: 100vh; /* Optional: full viewport height */
+    height: 100vh;
 }
 
-.login_label {
-    font-style: normal;
-    font-weight: 500;
+.important_labels {
+    font-weight: 550;
 }
 
-.login_indent {
+.login_spacing {
     width: 400px;
     height: 200px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
 .login_action, .register_action {
     width: 200px;
     height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: height 0.2s ease;
-} .register_action {
+}
+
+.register_action {
     height: 125px;
 }
 
 .login_container {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    background-color: #F0F0F0;
-    border-radius: 10px;
     width: 450px;
     height: 300px;
-    align-items: center;
-    justify-content: center;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+}
+
+.center_common {
     display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.center_items {
+    justify-content: center;
+}
+
+.column_direction {
+    flex-direction: column;
+}
+
+.spacing_between {
+    justify-content: space-between;
 }

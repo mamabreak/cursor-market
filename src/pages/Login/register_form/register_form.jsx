@@ -35,8 +35,8 @@ const Register_form = ({users, setUsers, formData, setFormData}) => {
 
     return(
         <>
-        <h1 className={styles.login_label}>Sign up</h1>
-        <form className={styles.register_action} onSubmit={handleRegister}>
+        <h1 className={styles.important_labels}>Sign up</h1>
+        <form className={`${styles.register_action} ${styles.spacing_between} ${styles.column_direction} ${styles.center_common}`} onSubmit={handleRegister}>
             <input className="name-input" placeholder="Real Name" type="text" name="realName" value={formData.realName} onChange={handleChange} required />
             <input className="login-input" placeholder="Email" type="email" name="login" value={formData.login} onChange={handleChange} required />
             <input className="password-input" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />

@@ -23,8 +23,8 @@ const Login_form = ({users}) => {
 
     return(
         <>
-        <h1 className={styles.login_label}>Log in</h1>
-            <form className={styles.login_action} onSubmit={handleLogin}>
+        <h1 className={styles.important_labels}>Log in</h1>
+            <form className={`${styles.login_action} ${styles.spacing_between} ${styles.column_direction} ${styles.center_common}`} onSubmit={handleLogin}>
                 <input className="login-input" placeholder="Email" type="email" name="login" value={formData.login} onChange={handleChange} required />
                 <input className="password-input" placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
                 <button type="submit" className="login_button">Log in</button>
