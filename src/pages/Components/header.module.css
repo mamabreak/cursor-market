@@ -1,4 +1,4 @@
-header {
+.header {
     padding: 0;
     margin: 0;
     width: 99vw;
@@ -50,4 +50,13 @@ h1 {
     align-items: center;
     display: flex;
     margin-right: 10px;
+}
+
+.common_centered {
+    align-items: center;
+    display: flex;
+}
+
+.space_between {
+    justify-content: space-between;
 }
