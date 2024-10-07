@@ -1,7 +1,9 @@
-import {react, useState} from 'react'
+import { useState } from 'react'
 import styles from '../login.module.css'
 
-const Login_form = ({formData = {login: '', password: ''}, setFormData, users}) => {
+const Login_form = ({users}) => {
+
+    const [formData, setFormData] = useState({ realName: '', login: '', password: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -13,10 +15,10 @@ const Login_form = ({formData = {login: '', password: ''}, setFormData, users}) 
         const user = users.find(u => u.login === formData.login && u.password === formData.password);
         if (user) {
             console.log('Logged in:', user);
-            setFormData({ realName: '', login: '', password: '' });
         } else {
             console.log('Invalid login credentials');
         }
+        setFormData({ login: '', password: '' });
     };
 
     return(
