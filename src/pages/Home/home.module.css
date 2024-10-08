@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.first_floor {
+    width: 100vw;
+    height: 860px;
+}
+
+.flex_dir_column {
+    flex-direction: column;
+}
+
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span_styles {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 90px;
+}
+
+.first_span_size {
+    width: 90vw;
+    height: 80px;
+}
+
+.second_span_size {
+    width: 75vw;
+    height: 80px;
+}
+
+.third_span_size {
+    width: 65vw;
+    height: 80px;
+}
+
+.fourth_span_size {
+    width: 55vw;
+    height: 80px;
+}
+
+.fifth_span_size {
+    width: 28vw;
+    height: 150px;
+}
+
+.fifth_span__bigger_size {
+    font-size: 150px;
+}
+
+.center_items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.justify_center {
+    display: flex;
+    justify-content: center;
+}
+
+.display_block {
+    display: block;
+}
+
+.position_absolute {
+    position: absolute;
+}
+
+.half_black {
+    background: linear-gradient(to right, black 50%, white 50%);
+}
+
+.white_text {
+    color: white;
+}
+
+.additional_padding {
+    padding: 20px;
+}
