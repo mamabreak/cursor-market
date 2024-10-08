@@ -1,7 +1,7 @@
 .header {
     padding: 0;
     margin: 0;
-    width: 99vw;
+    width: 100vw;
     height: 50px;
     user-select: text;
     display: flex;
@@ -32,7 +32,8 @@ h1 {
     background-color: black;
     width: 50vw;
     height: 50px;
-    display: block;
+    display: flex;
+    justify-content: right;
 }
 
 .brend_tools_container {
@@ -49,7 +50,7 @@ h1 {
     justify-content: space-between; /* This works for items inside the user-tools-bar */
     align-items: center;
     display: flex;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .common_centered {
