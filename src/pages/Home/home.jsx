@@ -5,6 +5,7 @@ import modern from '../../images/modern.png'
 import anime from '../../images/anime.png'
 import cartoon from '../../images/cartoon.png'
 import empty from '../../images/empty.png'
+import preview from '../../images/preview.png'
 
 const Home = () => {
     return (
@@ -50,6 +51,16 @@ const Home = () => {
                 <div className={styles.image_container}>
                     <img src={empty} alt="Modern" className={`${styles.preview_picture}`} />
                     <span className={`${styles.common_text} ${styles.picture_text} ${styles.color_black} ${styles.coming_soon}`}>More categories is coming soon...</span>
+                </div>
+            </div>
+        </div>
+        <div className={`${styles.third_floor} ${styles.justify_center} ${styles.flex_dir_column} ${styles.center_items} ${styles.anti_broke}`}>
+            <span className={`${styles.heading_text}`}>EASY SEARCH & FILTERS</span>
+            <div className={`${styles.space_between} ${styles.center_items} ${styles.padding_fifty} ${styles.third_preview_needed_width}`}>
+                <img src={preview} alt="Preview" className={`${styles.preview_pic} ${styles.space_between}`} />
+                <div className={`${styles.third_floor_span} ${styles.flex_dir_column} ${styles.center_items}`}>
+                    <span className={`${styles.common_text} ${styles.bigger_text_size}`}>SEACH</span>
+                    <span className={`${styles.common_text} ${styles.bigger_text_size} ${styles.additional_padding_right}`}>EASELY</span>
                 </div>
             </div>
         </div>

@@ -162,3 +162,38 @@ html, body {
 .coming_soon {
     bottom: 42%;
 }
+
+.third_floor {
+    height: 400px;
+    width: 100vw;
+    position: relative;
+}
+
+.third_floor img {
+    height: 306px;
+    width: 520px;
+}
+
+.padding_fifty {
+    padding: 50px;
+}
+
+.third_preview_needed_width {
+    width: 60vw;
+    height: fit-content;
+}
+
+.bigger_text_size {
+    font-size: 72px;
+}
+
+.third_floor_span {
+    height: fit-content;
+    width: 400px;
+}
+
+.additional_padding_right {
+    width: 400px;
+    display: flex;
+    justify-content: right;
+}
