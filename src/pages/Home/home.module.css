@@ -90,15 +90,19 @@ html, body {
     padding: 20px;
 }
 
+.additional_div_padding {
+    padding-top : 50px;
+}
+
 .second_floor {
     width: 100vw;
-    height: 800px;
+    height:fit-content;
 }
 
 .heading_text {
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 36px;
 }
 
@@ -190,10 +194,45 @@ html, body {
 .third_floor_span {
     height: fit-content;
     width: 400px;
+    letter-spacing: 5px;
 }
 
 .additional_padding_right {
     width: 400px;
     display: flex;
     justify-content: right;
+}
+
+.pre_footer {
+    width: 100vw;
+    height: fit-content;
+}
+
+.sign_buttons_main {
+    height: fit-content;
+    width: 20vw;
+}
+
+.sign_buttons_main button {
+    background-color: black;
+}
+
+.lighter_text {
+    font-weight: 400;
+}
+
+.smaller_text {
+    font-size: 28px;
+}
+
+.supportButton {
+    background-color: #304D89;
+}
+
+.pre_footer button {
+    font-size: 24px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
 }
