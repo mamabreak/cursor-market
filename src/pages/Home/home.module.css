@@ -89,3 +89,111 @@ html, body {
 .additional_padding {
     padding: 20px;
 }
+
+.second_floor {
+    width: 100vw;
+    height: 800px;
+}
+
+.heading_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.categories {
+    padding: 30px;
+    height: fit-content;
+    width: 75vw;
+    max-width: 55vw;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.anti_broke {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.image_container {
+    width: 426px;;
+    height: 267px;
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+
+.image_container img {
+    width: 426px;
+    height: 267px;
+}
+
+.common_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.picture_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    bottom: 45%; /* You can adjust this to fit where you want the text */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Text color */
+    font-size: 20px; /* Adjust font size */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    word-wrap: break-word; /* Wraps text if it gets too long */
+}
+
+.space_between {
+    justify-content: space-between;
+}
+
+.color_black {
+    color: black;
+}
+
+.coming_soon {
+    bottom: 42%;
+}
+
+.third_floor {
+    height: 400px;
+    width: 100vw;
+    position: relative;
+}
+
+.third_floor img {
+    height: 306px;
+    width: 520px;
+}
+
+.padding_fifty {
+    padding: 50px;
+}
+
+.third_preview_needed_width {
+    width: 60vw;
+    height: fit-content;
+}
+
+.bigger_text_size {
+    font-size: 72px;
+}
+
+.third_floor_span {
+    height: fit-content;
+    width: 400px;
+}
+
+.additional_padding_right {
+    width: 400px;
+    display: flex;
+    justify-content: right;
+}
