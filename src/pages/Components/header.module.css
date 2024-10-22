@@ -12,6 +12,7 @@ h1 {
     font-style: bold;
     font-weight: 1000;
     color: black;
+    user-select: none;
 }
 
 .brend_name_first_label {

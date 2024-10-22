@@ -9,6 +9,10 @@ html, body {
     font-weight: 400;
 }
 
+span, img {
+    user-select: none;
+}
+
 .first_floor {
     width: 100vw;
     height: 860px;
